@@ -48,13 +48,6 @@ jobs:
           export/android/debug_keystore_pass = "android"
           EOS
 
-      - name: Diagnostics
-        run: |
-          echo "--- SDK ---"; ls "$ANDROID_HOME" "$ANDROID_HOME/build-tools" "$ANDROID_HOME/platforms" "$ANDROID_HOME/cmdline-tools" || true
-          echo "--- presets ---"; ls -la export_presets.cfg || echo "MISSING export_presets.cfg"
-          grep -nE '^name=|^platform=|package/unique_name|gradle_build|architectures|keystore|texture_format|etc2' export_presets.cfg || true
-          echo "--- settings ---"; cat ~/.config/godot/editor_settings-4.tres
-
       - name: Import and export APK
         env:
           GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ github.workspace }}/debug.keystore
@@ -63,7 +56,7 @@ jobs:
         run: |
           godot --headless --path . --import || true
           mkdir -p build
-          godot --headless --path . --verbose --export-debug "Android" build/violet-files.apk
+          godot --headless --path . --export-debug "Android" build/violet-files.apk
 
       - uses: actions/upload-artifact@v4
         with:
