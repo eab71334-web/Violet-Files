@@ -1,0 +1,39 @@
+; Engine configuration file.
+; Violet Files / الملفات البنفسجية
+config_version=5
+
+[application]
+
+config/name="Violet Files"
+config/name_localized={
+"ar": "الملفات البنفسجية"
+}
+config/description="لعبة محقق خاص للجوال - Private detective mobile game"
+run/main_scene="res://scenes/main_menu.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Loc="*res://autoload/loc.gd"
+Game="*res://autoload/game.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/window_width_override=432
+window/size/window_height_override=768
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.043, 0.039, 0.078, 1)
