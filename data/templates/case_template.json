@@ -1,0 +1,158 @@
+{
+ "_comment": "قالب كتابة قضية جديدة من الوثيقة (القسم 12). انسخه وعدّل. New case template from the GDD (section 12).",
+ "id": "case_XX",
+ "number": 0,
+ "district": "rust|downtown|hill|port",
+ "hours": 10,
+ "victim": "",
+ "killer": "",
+ "motive": "",
+ "location": "",
+ "title": {
+  "ar": "",
+  "en": ""
+ },
+ "summary": {
+  "ar": "",
+  "en": ""
+ },
+ "client": {
+  "name": {
+   "ar": "",
+   "en": ""
+  },
+  "opening": 100,
+  "patience": 3,
+  "greed": 0.3,
+  "max": 200,
+  "honest_anger": true,
+  "skin": "#D9B79A",
+  "intro": {
+   "ar": "",
+   "en": ""
+  }
+ },
+ "evidence_plan": {
+  "real": 3,
+  "misleading": 2
+ },
+ "witness_plan": [
+  "صادق",
+  "كاذب",
+  "يخفي شيئًا صغيرًا"
+ ],
+ "twist_type": "",
+ "special_scene": "hide | chase | none",
+ "main_tool": "flashlight|uv|fingerprint|magnifier",
+ "yasser_piece": "",
+ "scenes": [
+  {
+   "id": "scene_1",
+   "type": "search",
+   "title": {
+    "ar": "",
+    "en": ""
+   },
+   "bg": "#12101F",
+   "intro": {
+    "ar": "",
+    "en": ""
+   },
+   "items": [
+    {
+     "id": "item_1",
+     "needs": "none|light|uv|print|detail",
+     "x": 0.5,
+     "y": 0.5,
+     "kind": "real|misleading",
+     "supports": [
+      "answer_id"
+     ],
+     "label": {
+      "ar": "",
+      "en": ""
+     },
+     "desc": {
+      "ar": "",
+      "en": ""
+     }
+    }
+   ]
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "w1",
+   "name": {
+    "ar": "",
+    "en": ""
+   },
+   "baseline": "normal|nervous|cold",
+   "start_tension": 15,
+   "start_trust": 40,
+   "break_at": 60,
+   "min_trust": 25,
+   "weak_to": [],
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal|peripheral|hidden",
+     "text": {
+      "ar": ""
+     },
+     "answer": {
+      "ar": ""
+     },
+     "lie": false,
+     "truth": {
+      "ar": ""
+     },
+     "reveals": "clue_id"
+    }
+   ],
+   "clues": {
+    "clue_id": {
+     "supports": [
+      "answer_id"
+     ],
+     "label": {
+      "ar": ""
+     },
+     "desc": {
+      "ar": ""
+     }
+    }
+   }
+  }
+ ],
+ "question": {
+  "text": {
+   "ar": "",
+   "en": ""
+  },
+  "options": [
+   {
+    "id": "a",
+    "text": {
+     "ar": ""
+    },
+    "correct": true
+   },
+   {
+    "id": "b",
+    "text": {
+     "ar": ""
+    },
+    "correct": false
+   }
+  ]
+ },
+ "solution": {
+  "ar": "",
+  "en": ""
+ },
+ "twist": {
+  "ar": "",
+  "en": ""
+ }
+}
