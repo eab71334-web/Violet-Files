@@ -1,0 +1,377 @@
+{
+ "id": "case_03",
+ "number": 3,
+ "district": "downtown",
+ "hours": 10,
+ "title": {
+  "ar": "الشاهد الصادق",
+  "en": "The Honest Witness"
+ },
+ "summary": {
+  "ar": "شاهد وحيد على جريمة حريق، وأخته تجيب نيابة عنه عن كل سؤال. رسائله تصلك... لكن شيئًا ما خاطئ.",
+  "en": "The only witness to an arson, and his sister answers every question for him. His messages arrive... but something is wrong."
+ },
+ "client": {
+  "name": {
+   "ar": "الملازم رامي",
+   "en": "Lieutenant Rami"
+  },
+  "opening": 250,
+  "patience": 2,
+  "greed": 0.4,
+  "max": 450,
+  "honest_anger": false,
+  "skin": "#CBA283",
+  "intro": {
+   "ar": "لدي شاهد وحيد على حريق المخزن، ولا يتكلم معي. حقق معه أنت. أعرض مئتين وخمسين.",
+   "en": "I have one witness to the warehouse fire and he won't talk to me. You question him. I offer two hundred fifty."
+  }
+ },
+ "scenes": [
+  {
+   "id": "flat",
+   "type": "search",
+   "title": {
+    "ar": "شقة الشاهد",
+    "en": "The witness's flat"
+   },
+   "bg": "#13101F",
+   "intro": {
+    "ar": "اضغط على الدوائر ثم صوّر. الأشياء الباهتة تحتاج كشافك.",
+    "en": "Tap the circles, then photograph. Faint things need your flashlight."
+   },
+   "items": [
+    {
+     "id": "phone_msgs",
+     "needs": "none",
+     "x": 0.28,
+     "y": 0.3,
+     "kind": "real",
+     "supports": [
+      "dead"
+     ],
+     "label": {
+      "ar": "رسائل الشاهد",
+      "en": "The witness's messages"
+     },
+     "desc": {
+      "ar": "كلها بنفس الصياغة الجافة، وتصل في أوقات دوام أخته فقط.",
+      "en": "All in the same dry phrasing, sent only during his sister's work hours."
+     }
+    },
+    {
+     "id": "contacts",
+     "needs": "none",
+     "x": 0.72,
+     "y": 0.4,
+     "kind": "real",
+     "supports": [],
+     "label": {
+      "ar": "قائمة جهات اتصاله",
+      "en": "His contact list"
+     },
+     "desc": {
+      "ar": "اسم ياسر محفوظ في قائمة جهات الاتصال.",
+      "en": "Yasser's name is saved in his contacts."
+     },
+     "yasser": {
+      "ar": "اسم أخيك ياسر محفوظ في هاتف الشاهد.",
+      "en": "Your brother Yasser's name is saved in the witness's phone."
+     }
+    },
+    {
+     "id": "delivery",
+     "needs": "none",
+     "x": 0.5,
+     "y": 0.7,
+     "kind": "misleading",
+     "supports": [
+      "alive"
+     ],
+     "label": {
+      "ar": "إيصال توصيل طعام",
+      "en": "Food delivery receipt"
+     },
+     "desc": {
+      "ar": "إيصال باسم الشاهد قبل يومين... لكن طلبته أخته من هاتفها.",
+      "en": "A receipt in the witness's name from two days ago... ordered by his sister from her phone."
+     }
+    }
+   ]
+  },
+  {
+   "id": "room",
+   "type": "search",
+   "requires": [
+    "flat"
+   ],
+   "title": {
+    "ar": "غرفة نومه",
+    "en": "His bedroom"
+   },
+   "bg": "#0C0A16",
+   "intro": {
+    "ar": "الغرفة مظلمة. الكشاف يكشف ما لا تراه العين.",
+    "en": "The room is dark. The flashlight shows what the eye misses."
+   },
+   "items": [
+    {
+     "id": "bed_dust",
+     "needs": "light",
+     "x": 0.35,
+     "y": 0.35,
+     "kind": "real",
+     "supports": [
+      "dead"
+     ],
+     "label": {
+      "ar": "غبار على السرير",
+      "en": "Dust on the bed"
+     },
+     "desc": {
+      "ar": "طبقة غبار سميكة لم تُلمس منذ أكثر من أسبوع.",
+      "en": "A thick layer of dust untouched for over a week."
+     }
+    },
+    {
+     "id": "fridge",
+     "needs": "light",
+     "x": 0.7,
+     "y": 0.62,
+     "kind": "real",
+     "supports": [
+      "dead"
+     ],
+     "label": {
+      "ar": "طعام فاسد",
+      "en": "Spoiled food"
+     },
+     "desc": {
+      "ar": "طعام بتاريخ قبل الحريق بأسبوع لم يُؤكل منه شيء.",
+      "en": "Food dated a week before the fire, untouched."
+     }
+    }
+   ]
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "sister",
+   "name": {
+    "ar": "هدى (أخت الشاهد)",
+    "en": "Huda (the witness's sister)"
+   },
+   "baseline": "normal",
+   "start_tension": 20,
+   "start_trust": 40,
+   "break_at": 65,
+   "min_trust": 30,
+   "weak_to": [
+    "phone_msgs",
+    "bed_dust"
+   ],
+   "skin": "#D9B49A",
+   "intro": {
+    "ar": "هدى تجيب عن أخيها دائمًا. راقب ما تخفيه لا ما تقوله.",
+    "en": "Huda always answers for her brother. Watch what she hides, not what she says."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "كم عمر أخيك؟"
+     },
+     "answer": {
+      "ar": "ثمانية وثلاثون."
+     }
+    },
+    {
+     "id": "q2",
+     "cat": "normal",
+     "text": {
+      "ar": "منذ متى تعيشان معًا؟"
+     },
+     "answer": {
+      "ar": "منذ وفاة والدتنا."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "peripheral",
+     "text": {
+      "ar": "لماذا تجيبين عنه دائمًا؟"
+     },
+     "answer": {
+      "ar": "إنه خجول ومتعب. أتولى الكلام عنه."
+     }
+    },
+    {
+     "id": "q4",
+     "cat": "peripheral",
+     "text": {
+      "ar": "متى رأيتِه آخر مرة؟"
+     },
+     "answer": {
+      "ar": "هذا الصباح، كان يشرب قهوته."
+     },
+     "lie": true
+    },
+    {
+     "id": "q5",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل رأيتِ أخاك حيًّا بعد الحريق؟"
+     },
+     "answer": {
+      "ar": "نعم طبعًا. وهو يكلمك برسائله."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "...لا. مات قبل الحريق بأسبوع. انتحر. لم أستطع أن أقولها لأحد."
+     },
+     "reveals": "sister_confess"
+    },
+    {
+     "id": "q6",
+     "cat": "hidden",
+     "text": {
+      "ar": "من يكتب الرسائل من هاتفه؟"
+     },
+     "answer": {
+      "ar": "هو بنفسه."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "أنا. كتبتها كي لا يعرف أحد أنه ابتُزّ حتى الموت."
+     },
+     "reveals": "sister_writes"
+    }
+   ],
+   "clues": {
+    "sister_confess": {
+     "supports": [
+      "dead"
+     ],
+     "label": {
+      "ar": "الأخت: مات قبل الحريق"
+     },
+     "desc": {
+      "ar": "اعترفت هدى بأن أخاها مات قبل الحريق بأسبوع."
+     }
+    },
+    "sister_writes": {
+     "supports": [
+      "dead"
+     ],
+     "label": {
+      "ar": "الأخت تكتب رسائله"
+     },
+     "desc": {
+      "ar": "اعترفت هدى بأنها هي من تكتب الرسائل من هاتف أخيها."
+     }
+    }
+   }
+  }
+ ],
+ "decisions": [
+  {
+   "id": "huda_plea",
+   "requires": [
+    "sister"
+   ],
+   "speaker": {
+    "ar": "هدى",
+    "en": "Huda"
+   },
+   "anger": 45,
+   "skin": "#D9B49A",
+   "prompt": {
+    "ar": "«أرجوك... لا تخبر أحدًا أنه انتحر بسبب الابتزاز. دعه يُذكر كشاهد شجاع.»",
+    "en": "'Please... don't tell anyone he took his own life because of blackmail. Let him be remembered as a brave witness.'"
+   },
+   "options": [
+    {
+     "id": "tell",
+     "tag": "legal",
+     "text": {
+      "ar": "تبلّغ الملازم بكل شيء",
+      "en": "Tell the lieutenant everything"
+     },
+     "result": {
+      "ar": "أبلغتَ. الحقيقة كاملة ستخرج.",
+      "en": "You told. The whole truth will come out."
+     }
+    },
+    {
+     "id": "hide",
+     "tag": "grey",
+     "text": {
+      "ar": "تخفي سبب الموت وتبلّغ بالحريق فقط",
+      "en": "Hide the cause of death, report only the fire"
+     },
+     "effects": {
+      "rep": {
+       "downtown": 2
+      }
+     },
+     "result": {
+      "ar": "وعدتها. ثمن الصمت تدفعه أنت.",
+      "en": "You promised her. You pay the price of silence."
+     }
+    }
+   ],
+   "silence_result": {
+    "ar": "صمتّ. بكت وخرجت.",
+    "en": "You stayed silent. She wept and left."
+   }
+  }
+ ],
+ "question": {
+  "text": {
+   "ar": "ما حال الشاهد؟",
+   "en": "What is the witness's real state?"
+  },
+  "options": [
+   {
+    "id": "alive",
+    "text": {
+     "ar": "حي لكنه يختبئ ويرسل رسائله",
+     "en": "Alive but hiding, sending his own messages"
+    },
+    "correct": false
+   },
+   {
+    "id": "dead",
+    "text": {
+     "ar": "مات قبل الحريق بأسبوع وأخته تتكلم باسمه",
+     "en": "Dead a week before the fire; his sister speaks in his name"
+    },
+    "correct": true
+   },
+   {
+    "id": "sister_killed",
+    "text": {
+     "ar": "الأخت قتلته",
+     "en": "His sister killed him"
+    },
+    "correct": false
+   }
+  ]
+ },
+ "solution": {
+  "ar": "الشاهد مات قبل الحريق بأسبوع. أخته هدى كتبت رسائله لتخفي أنه انتحر هربًا من ابتزاز، فلم يكن شاهدًا على شيء.",
+  "en": "The witness died a week before the fire. His sister Huda wrote his messages to hide that he took his life to escape blackmail, so he never witnessed anything."
+ },
+ "twist": {
+  "ar": "الانقلاب: الشاهد الذي كنت تظنه حيًا مات قبل الحريق. ومن الذي كان يبتزه؟",
+  "en": "Twist: the witness you thought alive died before the fire. And who was blackmailing him?"
+ },
+ "yasser_piece": {
+  "evidence_id": "contacts",
+  "text": {
+   "ar": "اسم أخيك ياسر محفوظ في هاتف الشاهد.",
+   "en": "Your brother Yasser's name is saved in the witness's phone."
+  }
+ }
+}

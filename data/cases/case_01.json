@@ -1,0 +1,469 @@
+{
+ "id": "case_01",
+ "number": 1,
+ "district": "rust",
+ "hours": 8,
+ "title": {
+  "ar": "قطة أم صالح",
+  "en": "Umm Saleh's Cat"
+ },
+ "summary": {
+  "ar": "عجوز تدفع مبلغًا صغيرًا لتجد قطتها المفقودة «سكّر». قضية سهلة ورخيصة... أو هكذا تبدو.",
+  "en": "An old woman pays a small fee to find her lost cat 'Sukkar'. A cheap, easy case... or so it seems."
+ },
+ "client": {
+  "name": {
+   "ar": "أم صالح",
+   "en": "Umm Saleh"
+  },
+  "opening": 80,
+  "patience": 3,
+  "greed": 0.35,
+  "max": 150,
+  "honest_anger": true,
+  "skin": "#C9A184",
+  "intro": {
+   "ar": "أرجوك يا بني... قطتي «سكّر» اختفت من أسبوع. ما عندي إلا ثمانين، والباقي أدعو لك به.",
+   "en": "Please, son... my cat Sukkar has been missing for a week. I only have eighty."
+  }
+ },
+ "scenes": [
+  {
+   "id": "street",
+   "type": "search",
+   "title": {
+    "ar": "شارع الورش (كاميرات الشارع)",
+    "en": "Workshop Street (street cameras)"
+   },
+   "bg": "#12101F",
+   "intro": {
+    "ar": "لمس الشاشة وتحريك الكشاف ببطء يكشف الأشياء. اضغط على دائرة الكاميرا ثم «صوّر».",
+    "en": "Hold the screen and move the flashlight slowly. Tap a camera circle, then Photograph."
+   },
+   "items": [
+    {
+     "id": "cam_a",
+     "needs": "none",
+     "x": 0.22,
+     "y": 0.3,
+     "kind": "real",
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "كاميرا محل الخردة",
+      "en": "Scrap shop camera"
+     },
+     "desc": {
+      "ar": "القطة تعبر الزقاق متجهة نحو البناية المهجورة.",
+      "en": "The cat crosses the alley toward the abandoned building."
+     }
+    },
+    {
+     "id": "cam_b",
+     "needs": "none",
+     "x": 0.72,
+     "y": 0.42,
+     "kind": "real",
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "كاميرا الصيدلية",
+      "en": "Pharmacy camera"
+     },
+     "desc": {
+      "ar": "القطة تقفز السور نحو المبنى المهجور.",
+      "en": "The cat jumps the wall toward the abandoned building."
+     }
+    },
+    {
+     "id": "cam_c",
+     "needs": "none",
+     "x": 0.4,
+     "y": 0.68,
+     "kind": "real",
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "كاميرا الفرن",
+      "en": "Bakery camera"
+     },
+     "desc": {
+      "ar": "القطة عند باب البناية المهجورة، ورجل يقترب منها.",
+      "en": "The cat at the abandoned building's door, a man approaching."
+     }
+    },
+    {
+     "id": "collar",
+     "needs": "light",
+     "x": 0.8,
+     "y": 0.75,
+     "kind": "misleading",
+     "supports": [
+      "died"
+     ],
+     "label": {
+      "ar": "طوق أحمر",
+      "en": "Red collar"
+     },
+     "desc": {
+      "ar": "طوق ممزق على الرصيف... لكن الاسم المكتوب عليه «لولو» وليس «سكّر».",
+      "en": "A torn collar on the pavement... but the name on it is 'Lulu', not 'Sukkar'."
+     }
+    }
+   ]
+  },
+  {
+   "id": "basement",
+   "type": "search",
+   "requires": [
+    "street"
+   ],
+   "title": {
+    "ar": "قبو البناية المهجورة",
+    "en": "Abandoned building basement"
+   },
+   "bg": "#0A0814",
+   "intro": {
+    "ar": "القبو مظلم ورطب. الكشاف يكشف ما حولك فقط.",
+    "en": "The basement is dark and damp. The flashlight reveals only what is near."
+   },
+   "items": [
+    {
+     "id": "cages",
+     "needs": "light",
+     "x": 0.3,
+     "y": 0.3,
+     "kind": "real",
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "الأقفاص",
+      "en": "The cages"
+     },
+     "desc": {
+      "ar": "أكثر من 20 قفصًا فارغًا مصطفّة على الجدار.",
+      "en": "More than 20 empty cages lined up along the wall."
+     }
+    },
+    {
+     "id": "paw",
+     "needs": "light",
+     "x": 0.7,
+     "y": 0.55,
+     "kind": "real",
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "خدوش وفرو",
+      "en": "Scratches and fur"
+     },
+     "desc": {
+      "ar": "فرو أبيض وخدوش حديثة على باب القفص رقم 7. سكّر كانت هنا.",
+      "en": "White fur and fresh scratches on cage 7's door. Sukkar was here."
+     }
+    },
+    {
+     "id": "wall_photos",
+     "needs": "light",
+     "x": 0.45,
+     "y": 0.8,
+     "kind": "real",
+     "supports": [],
+     "label": {
+      "ar": "صور قديمة على الجدار",
+      "en": "Old photos on the wall"
+     },
+     "desc": {
+      "ar": "صور قديمة... وفي إحداها رجل تعرفه جيدًا.",
+      "en": "Old photos... and in one, a man you know very well."
+     },
+     "yasser": {
+      "ar": "صورة قديمة لأخيك ياسر واقفًا أمام نفس البناية.",
+      "en": "An old photo of your brother Yasser standing in front of this very building."
+     }
+    }
+   ]
+  },
+  {
+   "id": "closet",
+   "type": "hide",
+   "requires": [
+    "basement"
+   ],
+   "title": {
+    "ar": "اختبئ في الخزانة",
+    "en": "Hide in the closet"
+   },
+   "intro": {
+    "ar": "خطوات تقترب من القبو! تدخل خزانة قديمة وتغلق بابها بهدوء.",
+    "en": "Footsteps approach the basement! You slip into an old closet and close the door softly."
+   },
+   "reward": {
+    "id": "overheard",
+    "supports": [
+     "building"
+    ],
+    "label": {
+     "ar": "صوت في القبو",
+     "en": "A voice in the basement"
+    },
+    "desc": {
+     "ar": "سمعت رجلًا يقول: «انقلوا الأقفاص قبل الصباح». لم ترَ وجهه.",
+     "en": "You heard a man say: 'Move the cages before morning.' You didn't see his face."
+    }
+   }
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "neighbor",
+   "name": {
+    "ar": "الجارة سعاد",
+    "en": "Souad, the neighbor"
+   },
+   "baseline": "nervous",
+   "start_tension": 15,
+   "start_trust": 40,
+   "break_at": 70,
+   "min_trust": 30,
+   "weak_to": [
+    "cam_c"
+   ],
+   "skin": "#D8B08C",
+   "intro": {
+    "ar": "سعاد عصبية بطبعها: ترمش كثيرًا حتى وهي صادقة. ابدأ بأسئلة سهلة لتتعلم خط الأساس.",
+    "en": "Souad is naturally nervous: she blinks a lot even when honest. Start with easy questions to learn her baseline."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "منذ متى تسكنين في الحي؟"
+     },
+     "answer": {
+      "ar": "من ثلاثين سنة تقريبًا."
+     }
+    },
+    {
+     "id": "q2",
+     "cat": "normal",
+     "text": {
+      "ar": "هل عندك قطط في البيت؟"
+     },
+     "answer": {
+      "ar": "عندي قطتان، ولا أحب الغرباء."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "peripheral",
+     "text": {
+      "ar": "هل تمرّين بجانب البناية المهجورة عادة؟"
+     },
+     "answer": {
+      "ar": "أحيانًا... الطريق من هناك أقصر."
+     }
+    },
+    {
+     "id": "q4",
+     "cat": "peripheral",
+     "text": {
+      "ar": "سمعتِ باختفاء قطة أم صالح؟"
+     },
+     "answer": {
+      "ar": "سمعت. المسكينة، تبكي كل يوم."
+     }
+    },
+    {
+     "id": "q5",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل دخلتِ البناية المهجورة يومًا؟"
+     },
+     "answer": {
+      "ar": "لا، أبدًا. لا أعرف شيئًا عن ذلك المكان."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "...نعم. أُطعم القطط الضالة هناك كل مساء. رأيت سكّر قبل ثلاثة أيام، كانت مع رجل يحمل قفصًا."
+     },
+     "reveals": "neighbor_saw"
+    },
+    {
+     "id": "q6",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل رأيتِ أحدًا يدخل البناية؟"
+     },
+     "answer": {
+      "ar": "لا أحد. المكان ميت."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "رجل بطيء الخطى يحمل أقفاصًا، يلف وجهه بوشاح. يأتي بعد المغرب."
+     },
+     "reveals": "neighbor_man"
+    }
+   ],
+   "clues": {
+    "neighbor_saw": {
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "الجارة رأت القطة مع رجل"
+     },
+     "desc": {
+      "ar": "الجارة شاهدت سكّر مع رجل يحمل قفصًا قرب البناية."
+     }
+    },
+    "neighbor_man": {
+     "supports": [
+      "building"
+     ],
+     "label": {
+      "ar": "رجل يحمل أقفاصًا"
+     },
+     "desc": {
+      "ar": "رجل ملثم يحمل أقفاصًا يدخل البناية بعد المغرب."
+     }
+    }
+   }
+  }
+ ],
+ "question": {
+  "text": {
+   "ar": "أين قطة أم صالح «سكّر»؟",
+   "en": "Where is Umm Saleh's cat, Sukkar?"
+  },
+  "options": [
+   {
+    "id": "died",
+    "text": {
+     "ar": "ماتت على الطريق (الطوق دليل)",
+     "en": "Died on the road (the collar)"
+    },
+    "correct": false
+   },
+   {
+    "id": "building",
+    "text": {
+     "ar": "احتُجزت في قبو البناية المهجورة",
+     "en": "Held in the abandoned building's basement"
+    },
+    "correct": true
+   },
+   {
+    "id": "neighbor",
+    "text": {
+     "ar": "أخذتها الجارة سعاد",
+     "en": "The neighbor Souad took her"
+    },
+    "correct": false
+   }
+  ]
+ },
+ "solution": {
+  "ar": "سكّر احتُجزت في قبو البناية المهجورة مع قطط أخرى، ونُقلت قبل وصولك بساعات. الكاميرات الثلاث والأقفاص وفرو القطة تقود لنفس المكان.",
+  "en": "Sukkar was held in the abandoned basement with other cats and moved hours before you arrived. The three cameras, the cages and the fur all lead there."
+ },
+ "twist": {
+  "ar": "الانقلاب: القضية السهلة تحولت لرعب... ومن علّق صور ياسر على الجدار؟",
+  "en": "Twist: the easy case turned into a horror... and who put Yasser's photos on that wall?"
+ },
+ "yasser_piece": {
+  "evidence_id": "wall_photos",
+  "text": {
+   "ar": "صورة قديمة لأخيك ياسر واقفًا أمام نفس البناية.",
+   "en": "An old photo of your brother Yasser standing in front of this very building."
+  }
+ },
+ "decisions": [
+  {
+   "id": "wall_photos_choice",
+   "requires": [
+    "basement"
+   ],
+   "speaker": {
+    "ar": "أنت، أمام الجدار",
+    "en": "You, facing the wall"
+   },
+   "anger": 10,
+   "skin": "#D9B79A",
+   "prompt": {
+    "ar": "الصور القديمة أمامك، وصورة ياسر بينها. الشرطة ستصل لاحقًا... ولا أحد يراقبك الآن.",
+    "en": "The old photos are in front of you, Yasser's among them. Police will come later... and no one is watching you now."
+   },
+   "options": [
+    {
+     "id": "leave",
+     "tag": "legal",
+     "text": {
+      "ar": "تتركها مكانها وتبلّغ الشرطة",
+      "en": "Leave them and call the police"
+     },
+     "result": {
+      "ar": "تركتها كما هي. الشرطة ستجدها كاملة.",
+      "en": "You left everything. Police will find it intact."
+     }
+    },
+    {
+     "id": "one",
+     "tag": "grey",
+     "text": {
+      "ar": "تأخذ صورة ياسر وحدها",
+      "en": "Take only Yasser's photo"
+     },
+     "effects": {
+      "nerves": -5
+     },
+     "result": {
+      "ar": "صورة واحدة في جيبك الآن... ولن يعرف أحد.",
+      "en": "One photo in your pocket now... nobody will know."
+     }
+    },
+    {
+     "id": "all",
+     "tag": "illegal",
+     "text": {
+      "ar": "تنزع كل الصور وتأخذها",
+      "en": "Tear down all the photos and take them"
+     },
+     "effects": {
+      "evidence": {
+       "id": "wall_photos_taken",
+       "kind": "real",
+       "quality": 0.9,
+       "src": "decision",
+       "supports": [
+        "building"
+       ],
+       "label": {
+        "ar": "كل صور الجدار بحوزتك",
+        "en": "All wall photos in hand"
+       },
+       "desc": {
+        "ar": "نزعت الصور وفيها وجوه ومواعيد تربط المكان بالقطط المسروقة.",
+        "en": "You took the photos: faces and dates linking this place to the stolen cats."
+       }
+      }
+     },
+     "result": {
+      "ar": "أخذتها كلها. دليل أقوى... وعقوبة إن عرفوا.",
+      "en": "You took them all. Stronger proof... and punishment if they find out."
+     }
+    }
+   ],
+   "silence_result": {
+    "ar": "صمت طويل... ثم غادرت دون أن تلمس شيئًا.",
+    "en": "A long silence... then you left without touching anything."
+   }
+  }
+ ]
+}

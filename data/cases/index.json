@@ -1,0 +1,142 @@
+[
+ {
+  "id": "case_01",
+  "number": 1,
+  "playable": true,
+  "district": "rust",
+  "title": {
+   "ar": "قطة أم صالح",
+   "en": "Umm Saleh's Cat"
+  },
+  "summary": {
+   "ar": "عجوز تبحث عن قطتها... وقبو مليء بالأقفاص.",
+   "en": "An old woman's missing cat... and a basement full of cages."
+  }
+ },
+ {
+  "id": "case_02",
+  "number": 2,
+  "playable": true,
+  "district": "hill",
+  "title": {
+   "ar": "سمّ في شاي آل المنصوري",
+   "en": "Poison in the Mansouri Tea"
+  },
+  "summary": {
+   "ar": "رجل أعمال مات على العشاء وأربعة مشتبهين.",
+   "en": "A businessman dies at dinner with four suspects."
+  }
+ },
+ {
+  "id": "case_03",
+  "number": 3,
+  "playable": true,
+  "district": "downtown",
+  "title": {
+   "ar": "الشاهد الصادق",
+   "en": "The Honest Witness"
+  },
+  "summary": {
+   "ar": "شاهد وحيد على جريمة حريق، وأخته تجيب نيابة عنه... وتدرك أنه ميت من البداية.",
+   "en": "The only witness to an arson, answered for by his sister... and he was dead from the start."
+  }
+ },
+ {
+  "id": "case_04",
+  "number": 4,
+  "playable": false,
+  "district": "hill",
+  "title": {
+   "ar": "بيت الصدى",
+   "en": "House of Echoes"
+  },
+  "summary": {
+   "ar": "عائلة اختفت من منزل يسمع أصواتًا. اختباء كامل وكاشف حركة.",
+   "en": "A family vanished from a house that hears voices. Full hiding sequence and motion detector."
+  }
+ },
+ {
+  "id": "case_05",
+  "number": 5,
+  "playable": false,
+  "district": "port",
+  "title": {
+   "ar": "سرقة متحف الميناء",
+   "en": "The Port Museum Theft"
+  },
+  "summary": {
+   "ar": "تمثال أثري اختفى من متحف مراقب بثلاث كاميرات متضاربة التوقيت.",
+   "en": "An ancient statue vanished from a museum watched by three cameras with conflicting timestamps."
+  }
+ },
+ {
+  "id": "case_06",
+  "number": 6,
+  "playable": false,
+  "district": "rust",
+  "title": {
+   "ar": "ريّان",
+   "en": "Rayyan"
+  },
+  "summary": {
+   "ar": "طفل عمره 10 سنوات اختفى، والمهلة 24 ساعة داخل اللعبة.",
+   "en": "A 10-year-old boy is missing. 24 in-game hours."
+  }
+ },
+ {
+  "id": "case_07",
+  "number": 7,
+  "playable": false,
+  "district": "downtown",
+  "title": {
+   "ar": "الظل",
+   "en": "The Shadow"
+  },
+  "summary": {
+   "ar": "منذ أول القضية تحس أن أحدًا يتبعك. مطاردة سيارة بالليل.",
+   "en": "Someone has been following you since the start. A night car chase."
+  }
+ },
+ {
+  "id": "case_08",
+  "number": 8,
+  "playable": false,
+  "district": "downtown",
+  "title": {
+   "ar": "ساعي البريد",
+   "en": "The Postman"
+  },
+  "summary": {
+   "ar": "قاتل يرسل ظرفًا قبل كل جريمة، وكل طابع يدل على الضحية التالية.",
+   "en": "A killer mails an envelope before every murder; each stamp points to the next victim."
+  }
+ },
+ {
+  "id": "case_09",
+  "number": 9,
+  "playable": false,
+  "district": "hill",
+  "title": {
+   "ar": "حفل الأقنعة",
+   "en": "The Masquerade"
+  },
+  "summary": {
+   "ar": "30 ضيفًا بأقنعة وجريمة قتل. تقرأ اليدين والصوت فقط.",
+   "en": "30 masked guests and a murder. You read only hands and voice."
+  }
+ },
+ {
+  "id": "case_10",
+  "number": 10,
+  "playable": false,
+  "district": "downtown",
+  "title": {
+   "ar": "الغرفة 7",
+   "en": "Room 7"
+  },
+  "summary": {
+   "ar": "فندق قديم يعيد نفس الليلة كل مرة تنام فيها. نهاية الموسم.",
+   "en": "An old hotel replays the same night every time you sleep. Season finale."
+  }
+ }
+]

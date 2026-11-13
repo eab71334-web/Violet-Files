@@ -1,0 +1,574 @@
+{
+ "id": "case_02",
+ "number": 2,
+ "district": "hill",
+ "hours": 12,
+ "title": {
+  "ar": "سمّ في شاي آل المنصوري",
+  "en": "Poison in the Mansouri Tea"
+ },
+ "summary": {
+  "ar": "رجل أعمال مات على مائدة عشاء. أربعة مشتبهين: الزوجة الثانية، الابن، الطباخ، والشريك. كوب واحد فقط فيه السم.",
+  "en": "A businessman died at a dinner party. Four suspects: the second wife, the son, the cook and the partner. Only one cup held poison."
+ },
+ "client": {
+  "name": {
+   "ar": "دلال المنصوري",
+   "en": "Dalal Al-Mansouri"
+  },
+  "opening": 400,
+  "patience": 2,
+  "greed": 0.5,
+  "max": 700,
+  "honest_anger": false,
+  "skin": "#E0BFA5",
+  "intro": {
+   "ar": "أبي مات على مائدة العشاء. الشرطة تقول أزمة قلبية، لكنني أعرف أنه سُمّ. أعرض عليك أربعمئة.",
+   "en": "My father died at the dinner table. Police say heart attack, but I know he was poisoned. I offer you four hundred."
+  }
+ },
+ "scenes": [
+  {
+   "id": "dining",
+   "type": "search",
+   "title": {
+    "ar": "قاعة العشاء",
+    "en": "The dining hall"
+   },
+   "bg": "#14101F",
+   "intro": {
+    "ar": "تحتاج أدوات مختلفة: الضوء البنفسجي والبصمات والعدسة. اختر حقيبتك جيدًا (4 فقط).",
+    "en": "You need different tools: UV, prints and magnifier. Choose your bag wisely (only 4)."
+   },
+   "items": [
+    {
+     "id": "pitcher_prints",
+     "needs": "print",
+     "x": 0.3,
+     "y": 0.3,
+     "kind": "real",
+     "supports": [
+      "dalal"
+     ],
+     "label": {
+      "ar": "بصمات الإبريق",
+      "en": "Teapot prints"
+     },
+     "desc": {
+      "ar": "بصمات الطباخ، وبصمة امرأة صغيرة على غطاء الإبريق تطابق بصمة دلال على كوب الماء.",
+      "en": "The cook's prints, and a small woman's print on the lid matching Dalal's on a water glass."
+     }
+    },
+    {
+     "id": "cup_uv",
+     "needs": "uv",
+     "x": 0.68,
+     "y": 0.38,
+     "kind": "real",
+     "supports": [],
+     "label": {
+      "ar": "كتابة تحت الكوب",
+      "en": "Writing under the cup"
+     },
+     "desc": {
+      "ar": "رقم هاتف مكتوب بحبر بنفسجي مخفي على قاع الكوب.",
+      "en": "A phone number in hidden violet ink on the cup's base."
+     },
+     "yasser": {
+      "ar": "رقم هاتف مكتوب بحبر بنفسجي على قاع كوب، يخص أخاك ياسر.",
+      "en": "A phone number in violet ink under a cup, belonging to your brother Yasser."
+     }
+    },
+    {
+     "id": "cup_scratch",
+     "needs": "detail",
+     "x": 0.5,
+     "y": 0.62,
+     "kind": "real",
+     "supports": [],
+     "label": {
+      "ar": "خدش على الكوب",
+      "en": "Scratch on the cup"
+     },
+     "desc": {
+      "ar": "خدش دقيق متعمد على حافة الكوب المسموم لتمييزه. فاعلها يعرف الكوب مسبقًا.",
+      "en": "A tiny deliberate scratch on the poisoned cup's rim to mark it. Someone planned this."
+     }
+    },
+    {
+     "id": "threat_note",
+     "needs": "light",
+     "x": 0.82,
+     "y": 0.72,
+     "kind": "misleading",
+     "supports": [
+      "gamal"
+     ],
+     "label": {
+      "ar": "ورقة تهديد",
+      "en": "Threat note"
+     },
+     "desc": {
+      "ar": "ورقة تهديد بخط الشريك جمال للضحية... لكنها قديمة وتخص دينًا.",
+      "en": "A threat note in partner Gamal's hand to the victim... but it's old and about a debt."
+     }
+    }
+   ]
+  },
+  {
+   "id": "kitchen",
+   "type": "search",
+   "requires": [
+    "dining"
+   ],
+   "title": {
+    "ar": "المطبخ والفناء",
+    "en": "Kitchen and yard"
+   },
+   "bg": "#0F0C1D",
+   "intro": {
+    "ar": "المطبخ مليء بما يشتت الانتباه. ركّز على ما يهم.",
+    "en": "The kitchen is full of distractions. Focus on what matters."
+   },
+   "items": [
+    {
+     "id": "lipstick_vial",
+     "needs": "light",
+     "x": 0.35,
+     "y": 0.45,
+     "kind": "misleading",
+     "supports": [
+      "nadia"
+     ],
+     "label": {
+      "ar": "قارورة بأحمر شفاه",
+      "en": "Vial with lipstick"
+     },
+     "desc": {
+      "ar": "قارورة فارغة عليها أثر أحمر شفاه، ولون الأحمر هو لون الزوجة الثانية.",
+      "en": "An empty vial with lipstick on it, in the second wife's shade."
+     }
+    }
+   ]
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "nadia",
+   "name": {
+    "ar": "نادية (الزوجة الثانية)",
+    "en": "Nadia (second wife)"
+   },
+   "baseline": "normal",
+   "start_tension": 15,
+   "start_trust": 45,
+   "break_at": 60,
+   "min_trust": 20,
+   "skin": "#E3C3A8",
+   "weak_to": [],
+   "intro": {
+    "ar": "نادية صادقة لكنها حزينة وخائفة من الاتهام.",
+    "en": "Nadia is honest but grieving and afraid of being accused."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "أين كنتِ وقت التقديم؟"
+     },
+     "answer": {
+      "ar": "كنت جالسة على المائدة بجانب زوجي."
+     }
+    },
+    {
+     "id": "q2",
+     "cat": "peripheral",
+     "text": {
+      "ar": "هل كان بينك وبين زوجك خلاف؟"
+     },
+     "answer": {
+      "ar": "كنا نتجادل أحيانًا، لكنني أحببته."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل خرج أحد من القاعة قبل التقديم؟"
+     },
+     "answer": {
+      "ar": "نعم... دلال خرجت دقيقتين وعادت. ظننتها ذهبت للحمام."
+     },
+     "lie": false,
+     "reveals": "nadia_saw_exit"
+    }
+   ],
+   "clues": {
+    "nadia_saw_exit": {
+     "supports": [
+      "dalal"
+     ],
+     "label": {
+      "ar": "الزوجة: دلال غادرت القاعة"
+     },
+     "desc": {
+      "ar": "نادية رأت دلال تغادر القاعة دقيقتين قبل التقديم."
+     }
+    }
+   }
+  },
+  {
+   "id": "fares",
+   "name": {
+    "ar": "فارس (الابن)",
+    "en": "Fares (the son)"
+   },
+   "baseline": "cold",
+   "start_tension": 15,
+   "start_trust": 40,
+   "break_at": 65,
+   "min_trust": 25,
+   "skin": "#D3AE90",
+   "weak_to": [
+    "threat_note"
+   ],
+   "intro": {
+    "ar": "فارس بارد الأعصاب: لا يظهر عليه شيء حتى وهو يكذب. اعتمد على الأسئلة الحساسة والأدلة.",
+    "en": "Fares is ice cold: nothing shows even when he lies. Rely on sensitive questions and evidence."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "أين كنت قبل العشاء؟"
+     },
+     "answer": {
+      "ar": "في مكتبي طوال الوقت."
+     },
+     "lie": true
+    },
+    {
+     "id": "q2",
+     "cat": "peripheral",
+     "text": {
+      "ar": "كيف كانت علاقتك بأبيك؟"
+     },
+     "answer": {
+      "ar": "طبيعية، لا مشاكل."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل تشاجرتما قبل العشاء؟"
+     },
+     "answer": {
+      "ar": "أبدًا، كنا على وفاق."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "تشاجرنا على الميراث قبل العشاء بساعة... لكنني لم أسمّه، أقسم."
+     },
+     "reveals": "fares_fight"
+    }
+   ],
+   "clues": {
+    "fares_fight": {
+     "supports": [
+      "fares"
+     ],
+     "label": {
+      "ar": "الابن تشاجر مع أبيه"
+     },
+     "desc": {
+      "ar": "فارس اعترف بخلاف على الميراث قبل العشاء بساعة."
+     }
+    }
+   }
+  },
+  {
+   "id": "abu_hassan",
+   "name": {
+    "ar": "أبو حسن (الطباخ)",
+    "en": "Abu Hassan (the cook)"
+   },
+   "baseline": "nervous",
+   "start_tension": 15,
+   "start_trust": 35,
+   "break_at": 60,
+   "min_trust": 35,
+   "skin": "#CFA386",
+   "weak_to": [
+    "pitcher_prints"
+   ],
+   "intro": {
+    "ar": "الطباخ عصبي بطبعه: يرمش كثيرًا وهو صادق. اكسب ثقته بلطف.",
+    "en": "The cook is nervous by nature: he blinks a lot while honest. Win his trust with kindness."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "كم لك في هذا البيت؟"
+     },
+     "answer": {
+      "ar": "اثنا عشر عامًا، وهم أهلي."
+     }
+    },
+    {
+     "id": "q2",
+     "cat": "peripheral",
+     "text": {
+      "ar": "من حضّر الإبريق؟"
+     },
+     "answer": {
+      "ar": "أنا، وغسلته بنفسي قبل الطبخ."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل لمس أحدٌ الإبريق بعد أن حضّرته؟"
+     },
+     "answer": {
+      "ar": "لا أعرف... لا أحد."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "ابنة سيدي دلال رفعت الغطاء وقالت إنها تتأكد من حرارته. لم أجرؤ أن أقول."
+     },
+     "reveals": "cook_saw_dalal"
+    }
+   ],
+   "clues": {
+    "cook_saw_dalal": {
+     "supports": [
+      "dalal"
+     ],
+     "label": {
+      "ar": "الطباخ: دلال لمست الإبريق"
+     },
+     "desc": {
+      "ar": "أبو حسن رأى دلال ترفع غطاء الإبريق قبل التقديم."
+     }
+    }
+   }
+  },
+  {
+   "id": "gamal",
+   "name": {
+    "ar": "جمال (الشريك)",
+    "en": "Gamal (the partner)"
+   },
+   "baseline": "normal",
+   "start_tension": 15,
+   "start_trust": 40,
+   "break_at": 60,
+   "min_trust": 25,
+   "skin": "#D6B195",
+   "weak_to": [
+    "threat_note"
+   ],
+   "intro": {
+    "ar": "جمال يبتسم كثيرًا، ويخفي دينًا صغيرًا.",
+    "en": "Gamal smiles a lot and hides a small debt."
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "cat": "normal",
+     "text": {
+      "ar": "منذ متى شراكتكما؟"
+     },
+     "answer": {
+      "ar": "ثماني سنوات."
+     }
+    },
+    {
+     "id": "q2",
+     "cat": "peripheral",
+     "text": {
+      "ar": "هل كانت الشركة بخير؟"
+     },
+     "answer": {
+      "ar": "بخير، وإن كان هناك بعض الضغوط."
+     }
+    },
+    {
+     "id": "q3",
+     "cat": "hidden",
+     "text": {
+      "ar": "هل كان بينك وبينه خلاف مالي؟"
+     },
+     "answer": {
+      "ar": "لا، شراكتنا ممتازة."
+     },
+     "lie": true,
+     "truth": {
+      "ar": "عليّ دين له، وكتبت له ورقة تهديد في لحظة غضب... لكنني لم أقتله."
+     },
+     "reveals": "gamal_debt"
+    }
+   ],
+   "clues": {
+    "gamal_debt": {
+     "supports": [
+      "gamal"
+     ],
+     "label": {
+      "ar": "الشريك مدين للضحية"
+     },
+     "desc": {
+      "ar": "جمال اعترف بدين للضحية وبورقة تهديد قديمة."
+     }
+    }
+   }
+  }
+ ],
+ "question": {
+  "text": {
+   "ar": "من بدّل الكوب ووضع السم؟",
+   "en": "Who swapped the cup and poisoned it?"
+  },
+  "options": [
+   {
+    "id": "nadia",
+    "text": {
+     "ar": "نادية (الزوجة الثانية)"
+    },
+    "correct": false
+   },
+   {
+    "id": "fares",
+    "text": {
+     "ar": "فارس (الابن)"
+    },
+    "correct": false
+   },
+   {
+    "id": "abu_hassan",
+    "text": {
+     "ar": "أبو حسن (الطباخ)"
+    },
+    "correct": false
+   },
+   {
+    "id": "gamal",
+    "text": {
+     "ar": "جمال (الشريك)"
+    },
+    "correct": false
+   },
+   {
+    "id": "dalal",
+    "text": {
+     "ar": "دلال (ابنة الضحية والعميلة)"
+    },
+    "correct": true
+   }
+  ]
+ },
+ "solution": {
+  "ar": "دلال، ابنة الضحية، علّمت الكوب بخدش، ورفعت غطاء الإبريق لتضع السم، ثم استأجرتك لتتهم الزوجة الثانية.",
+  "en": "Dalal, the victim's daughter, marked the cup with a scratch, lifted the teapot lid to poison it, then hired you to frame the second wife."
+ },
+ "twist": {
+  "ar": "الانقلاب: العميلة التي استأجرتك هي القاتلة. غضبها أثناء التفاوض كان تمثيلًا، ولم يصل إلى عينيها.",
+  "en": "Twist: the client who hired you is the killer. Her anger during the negotiation was an act that never reached her eyes."
+ },
+ "yasser_piece": {
+  "evidence_id": "cup_uv",
+  "text": {
+   "ar": "رقم هاتف مكتوب بحبر بنفسجي تحت الكوب، يخص أخاك ياسر.",
+   "en": "A phone number in violet ink under the cup, belonging to your brother Yasser."
+  }
+ },
+ "decisions": [
+  {
+   "id": "dalal_bribe",
+   "requires": [
+    "kitchen"
+   ],
+   "speaker": {
+    "ar": "دلال المنصوري",
+    "en": "Dalal Al-Mansouri"
+   },
+   "anger": 30,
+   "skin": "#E0BFA5",
+   "prompt": {
+    "ar": "«خذ ثلاثمئة إضافية وأغلق الملف على نادية. الجميع سيرتاح.»",
+    "en": "'Take three hundred extra and close the file on Nadia. Everyone will rest easy.'"
+   },
+   "options": [
+    {
+     "id": "refuse",
+     "tag": "legal",
+     "text": {
+      "ar": "ترفض وتكمل تحقيقك",
+      "en": "Refuse and keep investigating"
+     },
+     "result": {
+      "ar": "رفضتَ. عيناها لم ترمشا.",
+      "en": "You refused. Her eyes did not blink."
+     }
+    },
+    {
+     "id": "take",
+     "tag": "illegal",
+     "text": {
+      "ar": "تقبل المال",
+      "en": "Take the money"
+     },
+     "effects": {
+      "money": 300
+     },
+     "result": {
+      "ar": "أخذت المال. ثقل في جيبك... وفي ضميرك.",
+      "en": "You took the money. Heavy in your pocket... and your conscience."
+     }
+    },
+    {
+     "id": "record",
+     "tag": "grey",
+     "requires_tool": "recorder",
+     "text": {
+      "ar": "تتظاهر بالقبول وتسجّلها",
+      "en": "Pretend to accept and record her"
+     },
+     "effects": {
+      "evidence": {
+       "id": "dalal_bribe_rec",
+       "kind": "real",
+       "quality": 0.95,
+       "src": "decision",
+       "supports": [
+        "dalal"
+       ],
+       "label": {
+        "ar": "تسجيل: دلال تعرض رشوة",
+        "en": "Recording: Dalal offers a bribe"
+       },
+       "desc": {
+        "ar": "سجّلتها وهي تعرض مالًا لإغلاق الملف على الزوجة الثانية.",
+        "en": "You recorded her offering money to close the file on the second wife."
+       }
+      }
+     },
+     "result": {
+      "ar": "سجّلتها. دليل قوي... لكن لو انكشفت فالمسجل لن ينفعك.",
+      "en": "You recorded her. Strong proof... but if she notices, the recorder won't save you."
+     }
+    }
+   ],
+   "silence_result": {
+    "ar": "صمتّ فابتسمت وقالت: «فكّر.»",
+    "en": "You stayed silent. She smiled: 'Think about it.'"
+   }
+  }
+ ]
+}
