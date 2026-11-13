@@ -38,7 +38,7 @@ jobs:
         run: |
           keytool -keyalg RSA -genkeypair -alias androiddebugkey -keypass android -keystore debug.keystore -storepass android -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -deststoretype pkcs12
           mkdir -p ~/.config/godot
-          cat > ~/.config/godot/editor_settings-4.3.tres <<EOS
+          cat > ~/.config/godot/editor_settings-4.tres <<EOS
           [gd_resource type="EditorSettings" format=3]
           [resource]
           export/android/android_sdk_path = "$ANDROID_HOME"
@@ -49,6 +49,10 @@ jobs:
           EOS
 
       - name: Import and export APK
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ github.workspace }}/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
         run: |
           godot --headless --path . --import || true
           mkdir -p build
